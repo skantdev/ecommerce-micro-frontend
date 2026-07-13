@@ -126,6 +126,25 @@ importers:
         specifier: ^5.5.2
         version: 5.9.3
 
+  packages/utils:
+    dependencies:
+      '@repo/constants':
+        specifier: workspace:*
+        version: link:../constants
+      '@repo/types':
+        specifier: workspace:*
+        version: link:../types
+      date-fns:
+        specifier: ^3.3.1
+        version: 3.6.0
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.12
+        version: 20.19.43
+      typescript:
+        specifier: ^5.5.2
+        version: 5.9.3
+
 packages:
 
   '@alloc/quick-lru@5.2.0':
@@ -860,6 +879,9 @@ packages:
   dargs@8.1.0:
     resolution: {integrity: sha512-wAV9QHOsNbwnWdNW2FYvE1P56wtgSbM+3SZcdGiWQILwVjACCXDCI3Ai8QlCjMDB8YK5zySiXZYBiwGmNY3lnw==}
     engines: {node: '>=12'}
+
+  date-fns@3.6.0:
+    resolution: {integrity: sha512-fRHTG8g/Gif+kSh50gaGEdToemgfj74aRX3swtiouboip5JDLAyDE9F11nHMIcvOaXeOC6D7SpNhi7uFyB7Uww==}
 
   debug@4.4.3:
     resolution: {integrity: sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==}
@@ -2415,6 +2437,8 @@ snapshots:
   csstype@3.2.3: {}
 
   dargs@8.1.0: {}
+
+  date-fns@3.6.0: {}
 
   debug@4.4.3:
     dependencies:
