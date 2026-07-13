@@ -27,8 +27,10 @@ export interface ApiErrorResponse {
 export interface ApiError {
   code: string;
   message: string;
+  statusCode?: number; // HTTP status code
   details?: Record<string, unknown>;
   field?: string; // Field that caused the error (for validation errors)
+  timestamp?: string; // ISO 8601 timestamp
   stack?: string; // Only in development
 }
 
