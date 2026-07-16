@@ -1,0 +1,35 @@
+{
+  "name": "@repo/theme",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Centralized design system and theme configuration for ecommerce micro frontend",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./tokens": {
+      "import": "./dist/tokens/index.js",
+      "types": "./dist/tokens/index.d.ts"
+    },
+    "./tailwind": "./tailwind.config.ts",
+    "./globals.css": "./src/globals.css"
+  },
+  "files": [
+    "dist",
+    "src",
+    "tailwind.config.ts"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "tailwindcss": "^4.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
